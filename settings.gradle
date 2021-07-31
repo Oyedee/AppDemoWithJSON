@@ -1,0 +1,2 @@
+rootProject.name = "AppDemoWithJSON"
+include ':app'
