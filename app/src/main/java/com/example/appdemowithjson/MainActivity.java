@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private Button fetchData;
-    private TextView displayData;
+    public static TextView displayData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         fetchData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //create an object of our fetchData class
+                FetchData fetchData = new FetchData();
+                fetchData.execute();
 
             }
         });
