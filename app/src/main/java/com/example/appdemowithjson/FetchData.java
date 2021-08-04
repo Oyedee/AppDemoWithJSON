@@ -17,7 +17,7 @@ import java.net.URL;
 public class FetchData extends AsyncTask<Void, Void, Void> {
 
     String data = "";
-    String urlData = "https://github.com/Oyedee/JsonObjectDemo/user.json";
+    String urlData = " https://oyedee.github.io/JsonObjectDemo/user.json";
     String singleParsed = "", dataParsed = "";
     @Override
     protected Void doInBackground(Void... voids) {
@@ -45,13 +45,14 @@ public class FetchData extends AsyncTask<Void, Void, Void> {
                         + "address: " + jsonObject.get("address") + "\n"
                         + "isProgrammer: " + jsonObject.get("isProgrammer");
                 //combine each single parsed object together with the total object in the array
-                dataParsed = dataParsed + singleParsed;
+                dataParsed = dataParsed + singleParsed + "\n";
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (JSONException e) {
+        }
+        catch (JSONException e) {
             e.printStackTrace();
         }
         return null;
